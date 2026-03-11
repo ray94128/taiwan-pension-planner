@@ -66,4 +66,4 @@ if st.sidebar.button("🚀 重新執行模擬", use_container_width=True):
             components.html(html_data, height=850, scrolling=True)
 
 else:
-    st.info("請調整左側參數，並點擊「重新執行模擬」來檢視報告。")ㄋ
+    st.info("請調整左側參數，並點擊「重新執行模擬」來檢視報告。")
