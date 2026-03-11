@@ -1,0 +1,5 @@
+__pycache__/
+*.html
+temp_config.json
+.streamlit/
+venv/
