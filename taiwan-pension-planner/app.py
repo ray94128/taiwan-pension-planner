@@ -9,12 +9,14 @@ st.title("📊 台灣三支柱退休金規劃與風險診斷")
 st.markdown("透過蒙地卡羅模擬，調整參數並即時重新計算退休成功率。")
 
 # --- 讀取預設參數 ---
-config_file = 'labor_config.json'
+base_path = os.path.dirname(__file__)
+config_file = os.path.join(base_path, 'labor_config.json')
+
 try:
     with open(config_file, 'r', encoding='utf-8') as f:
         cfg = json.load(f)
 except FileNotFoundError:
-    st.error(f"找不到 {config_file}，請確認檔案位置。")
+    st.error(f"找不到設定檔：{config_file}。請確認檔案已上傳至 GitHub。")
     st.stop()
 
 # --- 側邊欄：動態輸入介面 ---
